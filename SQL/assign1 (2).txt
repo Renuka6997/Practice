@@ -1,0 +1,87 @@
+SQL> select ename,sal
+  2  from emp
+  3  where sal>1200;
+
+ENAME             SAL                                                           
+---------- ----------                                                           
+ALLEN            1600                                                           
+WARD             1250                                                           
+JONES            2975                                                           
+MARTIN           1250                                                           
+BLAKE            2850                                                           
+CLARK            2450                                                           
+SCOTT            3000                                                           
+KING             5000                                                           
+TURNER           1500                                                           
+FORD             3000                                                           
+MILLER           1300                                                           
+
+11 rows selected.
+
+SQL> select ename
+  2  from emp
+  3  where mgr=7698;
+
+ENAME                                                                           
+----------                                                                      
+ALLEN                                                                           
+WARD                                                                            
+MARTIN                                                                          
+TURNER                                                                          
+JAMES                                                                           
+
+SQL> select sal*12 "annual salary"
+  2  from emp
+  3  where deptno=20;
+
+annual salary                                                                   
+-------------                                                                   
+         9600                                                                   
+        35700                                                                   
+        36000                                                                   
+        13200                                                                   
+        36000                                                                   
+
+SQL> select ename,sal
+  2  from emp
+  3  where sal<3000;
+
+ENAME             SAL                                                           
+---------- ----------                                                           
+SMITH             800                                                           
+ALLEN            1600                                                           
+WARD             1250                                                           
+JONES            2975                                                           
+MARTIN           1250                                                           
+BLAKE            2850                                                           
+CLARK            2450                                                           
+TURNER           1500                                                           
+ADAMS            1100                                                           
+JAMES             950                                                           
+MILLER           1300                                                           
+
+11 rows selected.
+
+SQL> select ename,mgr,deptno
+  2  from emp
+  3  where mgr=7698 and deptno=30;
+
+ENAME             MGR     DEPTNO                                                
+---------- ---------- ----------                                                
+ALLEN            7698         30                                                
+WARD             7698         30                                                
+MARTIN           7698         30                                                
+TURNER           7698         30                                                
+JAMES            7698         30                                                
+
+SQL> select ename
+  2  from emp
+  3  where deptno=10;
+
+ENAME                                                                           
+----------                                                                      
+CLARK                                                                           
+KING                                                                            
+MILLER                                                                          
+
+SQL> spool off
